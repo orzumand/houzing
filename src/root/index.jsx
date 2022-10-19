@@ -1,16 +1,24 @@
 import React from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import HomePage from "../pages/Home";
-import PropertesPage from "../pages/Properties";
+import Navbar from "../components/Navbar";
+import { navbar } from "../utils/navbar";
 
 export const Root = () => {
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/properties" element={<PropertesPage />} />
-          <Route path="*" element={<h1>404 Not Found</h1>} />
+          <Route element={<Navbar />}>
+            {navbar.map((value) => {
+              return (
+                <Route
+                  key={value.id}
+                  path={value.path}
+                  element={value.element}
+                />
+              );
+            })}
+          </Route>
           <Route path="/" element={<Navigate to="/home" />} />
         </Routes>
       </BrowserRouter>
