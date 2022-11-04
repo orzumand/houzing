@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { navbar } from "../../utils/navbar";
+import Button from "../Generic/Button";
 import { Container, NavbarWrapper, Logo, Section, Wrapper } from "./style";
 
 const Navbar = () => {
@@ -16,14 +17,18 @@ const Navbar = () => {
           <Section>
             {navbar.map((value, index) => {
               return (
-                <NavLink key={index} to={value.path}>
-                  {value.title}
-                </NavLink>
+                !value.hidden && (
+                  <NavLink key={index} to={value.path}>
+                    {value.title}
+                  </NavLink>
+                )
               );
             })}
           </Section>
           <Section>
-            <button>SignIn</button>
+            <Button onClick={() => navigate("/signin")} type="dark">
+              SignIn
+            </Button>
           </Section>
         </NavbarWrapper>
       </Wrapper>

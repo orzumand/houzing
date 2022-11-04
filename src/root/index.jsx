@@ -20,6 +20,7 @@ export const Root = () => {
             })}
           </Route>
           <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="*" element={<h2>not found</h2>} />
         </Routes>
       </BrowserRouter>
     </div>
