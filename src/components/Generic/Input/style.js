@@ -33,13 +33,23 @@ const Container = styled.input`
   border-radius: 2px;
   outline: none;
   border: 1px solid #e6e9ec;
-  padding-left: 16px;
+  padding-left: ${({ icon }) => (icon ? "44px" : "16px")};
+  color: var(--colorPrimary);
 
-  /* :active {
-    transform: scale(0.98);
-    opacity: 0.9;
-  } */
   /* ${getType} */
 `;
 
-export { Container };
+const Wrapper = styled.div`
+  display: flex;
+  width: 100%;
+  position: relative;
+`;
+
+const Icon = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translate(-50%, -50%);
+`;
+
+export { Container, Wrapper, Icon };
