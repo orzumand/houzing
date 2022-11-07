@@ -43,7 +43,11 @@ const Section = styled.div`
 const Logo = styled(logoImg)`
   width: 30px;
   margin-right: 12px;
-  color: white;
+  text-align: center;
 `;
-
+Section.Title = styled.div`
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+`;
 export { NavbarWrapper, Container, Wrapper, Section, Logo };

@@ -33,6 +33,8 @@ const Container = styled.input`
   border-radius: 2px;
   outline: none;
   border: 1px solid #e6e9ec;
+  max-width: ${({ mxwidth }) => `${mxwidth}px
+  `};
   padding-left: ${({ icon }) => (icon ? "44px" : "16px")};
   color: var(--colorPrimary);
 
