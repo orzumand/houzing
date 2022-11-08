@@ -1,17 +1,10 @@
-import { useState } from "react";
-import { Input } from "../Generic";
 import { Container } from "./style";
+import CarouselComponent from "./Carousel";
 
 const Home = () => {
-  const [title, setTitle] = useState("");
   return (
     <Container>
-      <Input
-        onChange={(e) => setTitle(e.target.value)}
-        placeholder={"home"}
-        width={200}
-      />
-      <h1>{title}</h1>
+      <CarouselComponent />
     </Container>
   );
 };

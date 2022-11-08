@@ -33,6 +33,10 @@ const Container = styled.input`
   border-radius: 2px;
   outline: none;
   border: 1px solid #e6e9ec;
+  :focus {
+    border: 1px solid #00dddf;
+    box-shadow: 0px 0px 5px #00dddf;
+  }
   max-width: ${({ mxwidth }) => `${mxwidth}px
   `};
   padding-left: ${({ icon }) => (icon ? "44px" : "16px")};
@@ -51,7 +55,7 @@ const Icon = styled.div`
   position: absolute;
   top: 50%;
   left: 30px;
-  transform: translate(-50%, -50%);
+  transform: translate(-40%, -43%);
 `;
 
 export { Container, Wrapper, Icon };
