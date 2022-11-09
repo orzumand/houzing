@@ -111,4 +111,5 @@ const Items = styled.div`
   height: 100%;
   background-color: red;
 `;
+
 export { Container, Arrows, Image, Content, Items };
