@@ -1,5 +1,14 @@
 import React from "react";
-import { Body, Container, Footer, Icon, Img, Scils, User } from "./style";
+import {
+  Body,
+  Container,
+  Footer,
+  Icon,
+  Img,
+  Scils,
+  User,
+  Icons,
+} from "./style";
 import noimg from "../../assets/img/noimage.png";
 const Card = ({ url, title, subtitle }) => {
   return (
@@ -11,10 +20,19 @@ const Card = ({ url, title, subtitle }) => {
           {subtitle || "Quincy St, Brooklyn, NY, USA"}
         </div>
         <Scils>
-          <Scils.Item>4 Beds</Scils.Item>
-          <Scils.Item> 5 Baths</Scils.Item>
-          <Scils.Item>1 Garage</Scils.Item>
-          <Scils.Item>1200 Sq Ft</Scils.Item>
+          <Scils.Item>
+            <Icons.Bed />4 Beds
+          </Scils.Item>
+          <Scils.Item>
+            <Icons.Bath /> 5 Baths
+          </Scils.Item>
+          <Scils.Item>
+            <Icons.Car />1 Garage
+          </Scils.Item>
+          <Scils.Item>
+            <Icons.Size />
+            1200 Sq Ft
+          </Scils.Item>
         </Scils>
       </Body>
       <User />

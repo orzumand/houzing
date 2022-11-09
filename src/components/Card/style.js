@@ -1,5 +1,8 @@
 import styled from "styled-components";
-
+import { ReactComponent as Bath } from "../../assets/icons/bath.svg";
+import { ReactComponent as Car } from "../../assets/icons/car.svg";
+import { ReactComponent as Bed } from "../../assets/icons/bed.svg";
+import { ReactComponent as Size } from "../../assets/icons/ruler.svg";
 const Container = styled.div`
   width: 380px;
   height: 429px;
@@ -41,7 +44,10 @@ Scils.Item = styled.div`
   line-height: 20px;
   color: #696969;
   height: 100%;
-  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 const Footer = styled.div`
   height: 60px;
@@ -59,7 +65,7 @@ const Icon = styled.div`
   height: 35px;
   width: 35px;
   margin-right: 4px;
-  background-color: gray;
+  background: #f6f8f9;
 `;
 const User = styled.div`
   width: 38px;
@@ -70,7 +76,15 @@ const User = styled.div`
   top: 52%;
   right: 0;
   border: 2px solid white;
-
   transform: translate(-50%, -50%);
 `;
-export { Container, Img, Body, Footer, Scils, Icon, User };
+const Icons = styled.div``;
+
+Icons.Bath = styled(Bath)`
+  margin-top: -2px;
+  padding-bottom: 4px;
+`;
+Icons.Car = styled(Car)``;
+Icons.Bed = styled(Bed)``;
+Icons.Size = styled(Size)``;
+export { Container, Img, Body, Footer, Scils, Icon, User, Icons };
