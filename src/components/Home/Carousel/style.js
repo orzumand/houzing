@@ -1,5 +1,8 @@
 import styled from "styled-components";
-
+import { ReactComponent as Bath } from "../../../assets/icons/bath.svg";
+import { ReactComponent as Car } from "../../../assets/icons/car.svg";
+import { ReactComponent as Bed } from "../../../assets/icons/bed.svg";
+import { ReactComponent as Size } from "../../../assets/icons/ruler.svg";
 import { ReactComponent as Arrow } from "../../../assets/icons/ArrowIcon.svg";
 const Container = styled.div`
   height: 571px;
@@ -85,11 +88,9 @@ Content.Subtitle = styled.div`
   color: #ffffff;
 `;
 Content.Scils = styled.div`
-  width: 337px;
-  height: 47px;
-  border: 2px solid blueItems;
+  width: 357px;
+  height: 57px;
   margin-bottom: 24px;
-  gap: 24px;
   display: flex;
 `;
 Content.Price = styled.div`
@@ -106,10 +107,40 @@ Content.Price = styled.div`
   color: #ffffff;
 `;
 const Items = styled.div`
-  border: 1px solid red;
   width: 100%;
   height: 100%;
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+`;
+const Icons = styled.div`
+  &path {
+    fill: white;
+  }
 `;
 
-export { Container, Arrows, Image, Content, Items };
+Icons.Bath = styled(Bath)`
+  margin-top: -2px;
+  padding-bottom: 4px;
+  & path {
+    fill: #ffffff;
+  }
+`;
+Icons.Car = styled(Car)`
+  & path {
+    fill: #ffffff;
+  }
+`;
+Icons.Bed = styled(Bed)`
+  & path {
+    fill: #ffffff;
+  }
+`;
+Icons.Size = styled(Size)`
+  & path {
+    fill: #ffffff;
+  }
+`;
+export { Container, Arrows, Image, Content, Items, Icons };

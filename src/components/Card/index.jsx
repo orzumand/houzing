@@ -10,7 +10,19 @@ import {
   Icons,
 } from "./style";
 import noimg from "../../assets/img/noimage.png";
-const Card = ({ url, title, subtitle }) => {
+import user from "../../assets/icons/user.png";
+const Card = ({
+  url,
+  title,
+  subtitle,
+  bed,
+  bath,
+  garage,
+  size,
+  userimg,
+  sale,
+  price,
+}) => {
   return (
     <Container>
       <Img src={url || noimg} />
@@ -21,29 +33,35 @@ const Card = ({ url, title, subtitle }) => {
         </div>
         <Scils>
           <Scils.Item>
-            <Icons.Bed />4 Beds
+            <Icons.Bed />
+            {bed || "4 Beds"}
           </Scils.Item>
           <Scils.Item>
-            <Icons.Bath /> 5 Baths
+            <Icons.Bath /> {bath || "5 Baths"}
           </Scils.Item>
           <Scils.Item>
-            <Icons.Car />1 Garage
+            <Icons.Car />
+            {garage || "1 Garage"}
           </Scils.Item>
           <Scils.Item>
             <Icons.Size />
-            1200 Sq Ft
+            {size || "1200 Sq Ft"}
           </Scils.Item>
         </Scils>
       </Body>
-      <User />
+      <User src={userimg || user} />
       <Footer>
         <Footer.Item>
-          <div className="deleted">$2,800/mo</div>
-          <div className="title">$7,500/mo</div>
+          <div className="deleted">{sale || "$2, 800 / mo"}</div>
+          <div className="title">{price || "$7,500/mo"}</div>
         </Footer.Item>
         <Footer.Item flex={"flex"}>
-          <Icon />
-          <Icon />
+          <Icon>
+            <Icons.Resize />
+          </Icon>
+          <Icon>
+            <Icons.Heart />
+          </Icon>
         </Footer.Item>
       </Footer>
     </Container>
