@@ -10,11 +10,12 @@ const Container = styled.div`
   height: 429px;
   display: flex;
   flex-direction: column;
-  border: 1px solid green;
+
   filter: drop-shadow(0px 20px 38px rgba(0, 0, 0, 0.06))
     drop-shadow(0px 7px 46px rgba(0, 0, 0, 0.06))
     drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.06));
   margin: 100px;
+  background-color: white;
 `;
 
 const Img = styled.img`
