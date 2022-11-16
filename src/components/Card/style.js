@@ -3,6 +3,8 @@ import { ReactComponent as Bath } from "../../assets/icons/bath.svg";
 import { ReactComponent as Car } from "../../assets/icons/car.svg";
 import { ReactComponent as Bed } from "../../assets/icons/bed.svg";
 import { ReactComponent as Size } from "../../assets/icons/ruler.svg";
+import { ReactComponent as Resize } from "../../assets/icons/resize.svg";
+import { ReactComponent as Heart } from "../../assets/icons/heart.svg";
 const Container = styled.div`
   width: 380px;
   height: 429px;
@@ -64,14 +66,20 @@ Footer.Item = styled.div`
 const Icon = styled.div`
   height: 35px;
   width: 35px;
-  margin-right: 4px;
+  margin-right: 5px;
+  border-radius: 25px;
   background: #f6f8f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
 `;
-const User = styled.div`
+const User = styled.img`
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background-color: black;
+  /* background-color: black; */
   position: absolute;
   top: 52%;
   right: 0;
@@ -87,4 +95,14 @@ Icons.Bath = styled(Bath)`
 Icons.Car = styled(Car)``;
 Icons.Bed = styled(Bed)``;
 Icons.Size = styled(Size)``;
+Icons.Resize = styled(Resize)``;
+Icons.Heart = styled(Heart)`
+  margin-bottom: -4px;
+  :active {
+    & path {
+      fill: red;
+      background-color: red;
+    }
+  }
+`;
 export { Container, Img, Body, Footer, Scils, Icon, User, Icons };
