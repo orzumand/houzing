@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <Container>
       <CarouselComponent />
-      <Card />
+      {/* <Card /> */}
     </Container>
   );
 };

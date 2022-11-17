@@ -11,48 +11,50 @@ import {
 } from "./style";
 import noimg from "../../assets/img/noimage.png";
 import user from "../../assets/icons/user.png";
-const Card = ({
-  url,
-  title,
-  subtitle,
-  bed,
-  bath,
-  garage,
-  size,
-  userimg,
-  sale,
-  price,
-}) => {
+const Card = ({ data }) => {
+  const {
+    attachments,
+    city,
+    country,
+    description,
+    address,
+    userimg,
+    salePrice,
+    price,
+    houseDetails,
+  } = data;
   return (
     <Container>
-      <Img src={url || noimg} />
+      <Img src={attachments[0]?.imgPath || noimg} />
       <Body>
-        <div className="title">{title || "New Apartment Nice Wiew"}</div>
-        <div className="subtitle">
-          {subtitle || "Quincy St, Brooklyn, NY, USA"}
+        <div className="title">
+          {city},{country},{description}
+        </div>
+        <div className="subtitle inline">
+          {address || "Quincy St, Brooklyn, NY, USA"}
         </div>
         <Scils>
           <Scils.Item>
             <Icons.Bed />
-            {bed || "4 Beds"}
+            {houseDetails?.beds + "Beds" || "4 Beds"}
           </Scils.Item>
           <Scils.Item>
-            <Icons.Bath /> {bath || "5 Baths"}
+            <Icons.Bath /> {houseDetails?.bath + "Baths" || "5 Baths"}
           </Scils.Item>
           <Scils.Item>
             <Icons.Car />
-            {garage || "1 Garage"}
+            {houseDetails?.garage + "Garage" || "1 Garage"}
           </Scils.Item>
           <Scils.Item>
             <Icons.Size />
-            {size || "1200 Sq Ft"}
+            {houseDetails?.area + "Sq Ft" || "1200 Sq Ft"}
           </Scils.Item>
         </Scils>
       </Body>
       <User src={userimg || user} />
       <Footer>
         <Footer.Item>
-          <div className="deleted">{sale || "$2, 800 / mo"}</div>
+          <div className="deleted">{salePrice || "$2, 800 / mo"}</div>
           <div className="title">{price || "$7,500/mo"}</div>
         </Footer.Item>
         <Footer.Item flex={"flex"}>
