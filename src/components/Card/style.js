@@ -21,6 +21,7 @@ const Container = styled.div`
 const Img = styled.img`
   width: 100%;
   max-height: 220px;
+  height: 100%;
 `;
 
 const Body = styled.div`
