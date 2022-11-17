@@ -11,20 +11,58 @@ import {
 import { Button, Input } from "../Generic";
 import { Popover } from "antd";
 import { useRef } from "react";
+import { uzeReplace } from "../../hooks/useReplace";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useSearch } from "../../hooks/useSearch";
 const Filter = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const countryRef = useRef();
   const regionRef = useRef();
   const cityRef = useRef();
   const zipcodeRef = useRef();
+  const query = useSearch();
+
+  const onChange = ({ target: { name, value } }) => {
+    navigate(`${location.pathname}${uzeReplace(name, value)}`);
+  };
 
   const menu = (
     <MenuWrapper>
       <MenuTitle>Adress</MenuTitle>
       <Sec>
-        <Input ref={countryRef} placeholder={"Country"} mxwidth={200} />
-        <Input ref={regionRef} placeholder={"Region"} mxwidth={200} />
-        <Input ref={cityRef} placeholder={"City"} mxwidth={200} />
-        <Input ref={zipcodeRef} placeholder={"Zip code"} mxwidth={200} />
+        <Input
+          defaultValue={query.get("country")}
+          onChange={onChange}
+          name={"country"}
+          ref={countryRef}
+          placeholder={"Country"}
+          mxwidth={200}
+        />
+        <Input
+          defaultValue={query.get("region")}
+          name={"region"}
+          onChange={onChange}
+          ref={regionRef}
+          placeholder={"Region"}
+          mxwidth={200}
+        />
+        <Input
+          defaultValue={query.get("city")}
+          name={"city"}
+          onChange={onChange}
+          ref={cityRef}
+          placeholder={"City"}
+          mxwidth={200}
+        />
+        <Input
+          defaultValue={query.get("zip_code")}
+          name={"zip_code"}
+          onChange={onChange}
+          ref={zipcodeRef}
+          placeholder={"Zip code"}
+          mxwidth={200}
+        />
       </Sec>
       <MenuTitle>Appartment Info</MenuTitle>
       <Sec>
@@ -43,6 +81,7 @@ const Filter = () => {
       </BottomSection>
     </MenuWrapper>
   );
+
   return (
     <Wrapper>
       <Container>

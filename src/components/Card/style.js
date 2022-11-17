@@ -10,11 +10,11 @@ const Container = styled.div`
   height: 429px;
   display: flex;
   flex-direction: column;
-
-  filter: drop-shadow(0px 20px 38px rgba(0, 0, 0, 0.06))
+  border: 1px solid #e6e9ec;
+  /* filter: drop-shadow(0px 20px 38px rgba(0, 0, 0, 0.06))
     drop-shadow(0px 7px 46px rgba(0, 0, 0, 0.06))
-    drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.06));
-  margin: 100px;
+    drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.06)); */
+  position: relative;
   background-color: white;
 `;
 
@@ -30,7 +30,6 @@ const Body = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  position: relative;
 `;
 
 const Scils = styled.div`

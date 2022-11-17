@@ -25,7 +25,7 @@ const Card = ({ data }) => {
   } = data;
   return (
     <Container>
-      <Img src={attachments[0]?.imgPath || noimg} />
+      <Img src={(attachments && attachments[0]?.imgPath) || noimg} />
       <Body>
         <div className="title">
           {city},{country},{description}
