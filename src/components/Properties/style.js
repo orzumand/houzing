@@ -5,8 +5,10 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   padding: var(--padding);
+  margin-top: 64px;
 `;
 const Container = styled.div`
+  margin-top: 64px;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));

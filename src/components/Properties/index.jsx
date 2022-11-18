@@ -18,11 +18,11 @@ const Properties = () => {
   }, [search]);
   return (
     <Wrapper>
-      {/* <div className="maintitle">Properties</div>
+      <div className="maintitle">Properties</div>
       <div className="subtitle">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
         amet.
-      </div> */}
+      </div>
       <Container>
         {data?.map((value) => {
           return <Card key={value.id} data={value} />;
