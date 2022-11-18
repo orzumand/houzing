@@ -22,7 +22,7 @@ const Card = ({ data }) => {
     salePrice,
     price,
     houseDetails,
-  } = data;
+  } = data || {};
   return (
     <Container>
       <Img src={(attachments && attachments[0]?.imgPath) || noimg} />
@@ -36,18 +36,18 @@ const Card = ({ data }) => {
         <Scils>
           <Scils.Item>
             <Icons.Bed />
-            {houseDetails?.beds + "Beds" || "4 Beds"}
+            {houseDetails?.beds || "4 Beds"}
           </Scils.Item>
           <Scils.Item>
-            <Icons.Bath /> {houseDetails?.bath + "Baths" || "5 Baths"}
+            <Icons.Bath /> {houseDetails?.bath || "5 Baths"}
           </Scils.Item>
           <Scils.Item>
             <Icons.Car />
-            {houseDetails?.garage + "Garage" || "1 Garage"}
+            {houseDetails?.garage || "1 Garage"}
           </Scils.Item>
           <Scils.Item>
             <Icons.Size />
-            {houseDetails?.area + "Sq Ft" || "1200 Sq Ft"}
+            {houseDetails?.area || "1200 Sq Ft"}
           </Scils.Item>
         </Scils>
       </Body>

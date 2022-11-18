@@ -51,6 +51,8 @@ Arrows.Right = styled(Arrow)`
 
 const Image = styled.img`
   width: 100%;
+  min-width: 1440px;
+  overflow: hidden;
   height: 570px;
   z-index: 0;
   filter: brightness(30%);

@@ -18,8 +18,13 @@ const Properties = () => {
   }, [search]);
   return (
     <Wrapper>
+      {/* <div className="maintitle">Properties</div>
+      <div className="subtitle">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+        amet.
+      </div> */}
       <Container>
-        {data.map((value) => {
+        {data?.map((value) => {
           return <Card key={value.id} data={value} />;
         })}
       </Container>
