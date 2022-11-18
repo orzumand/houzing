@@ -48,8 +48,8 @@ const Filter = () => {
           mxwidth={200}
         />
         <Input
-          defaultValue={query.get("city")}
-          name={"city"}
+          defaultValue={query.get("address")}
+          name={"address"}
           onChange={onChange}
           ref={cityRef}
           placeholder={"City"}
