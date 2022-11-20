@@ -32,11 +32,16 @@ const Title = styled.div`
 
 const Input = styled.input`
   width: 100%;
-  /* height: 40px; */
+  height: 28px;
   font-size: 14px;
   color: #696969;
   border: none;
-  margin-bottom: 35px;
-  border-bottom: 1px solid #e6e9ec;
+  margin-bottom: 39px;
+  border-bottom: 2px solid #e6e9ec;
+  padding-bottom: 3px;
+  :focus {
+    outline: none;
+    border-bottom: 2px solid #00ddff;
+  }
 `;
 export { Input, Title, Container, Wrapper };
