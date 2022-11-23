@@ -2,6 +2,7 @@ import { Container } from "./style";
 import CarouselComponent from "./Carousel";
 import Recomended from "./Recomended";
 import ChooseUs from "./ChooseUs";
+import Category from "./Category";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <CarouselComponent />
       <Recomended />
       <ChooseUs />
+      <Category />
     </Container>
   );
 };

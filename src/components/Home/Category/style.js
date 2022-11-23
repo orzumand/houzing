@@ -6,9 +6,8 @@ import { ReactComponent as Discord } from "../../../assets/icons/discord.svg";
 const Wrapper = styled.div`
   width: 100%;
   height: 434px;
-  background: #f5f7fc;
   margin-top: 80px;
-
+  margin-bottom: 100px;
   padding: 48px 130px;
 `;
 const Container = styled.div`
@@ -23,15 +22,17 @@ const Content = styled.div`
   width: 100%;
   justify-content: space-between;
   margin-top: 40px;
+  gap: 20px;
 `;
-const Card = styled.div`
-  width: 229px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: center;
-  text-align: center;
-  height: 100%;
+const Card = styled.img`
+  max-width: 280x;
+  min-width: 230px;
+  width: 100%;
+  height: 350px;
+  filter: brightness(30%);
+`;
+const CardWrapper = styled.div`
+  position: relative;
 `;
 const Icon = styled.div``;
 Icon.Home = styled(Home)`
@@ -46,4 +47,19 @@ Icon.Map = styled(Map)`
 Icon.Discord = styled(Discord)`
   margin-bottom: 16px;
 `;
-export { Container, Wrapper, Content, Card, Icon };
+const Title = styled.div`
+  position: absolute;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+
+  color: #ffffff;
+
+  top: 229px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+`;
+export { Container, Wrapper, Content, Card, Icon, Title, CardWrapper };
