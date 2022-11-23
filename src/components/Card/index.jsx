@@ -28,7 +28,9 @@ const Card = ({ data }) => {
       <Img src={(attachments && attachments[0]?.imgPath) || noimg} />
       <Body>
         <div className="title">
-          {city},{country},{description}
+          {city}
+          {country}
+          {description}
         </div>
         <div className="subtitle inline">
           {address || "Quincy St, Brooklyn, NY, USA"}
