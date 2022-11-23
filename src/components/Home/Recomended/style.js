@@ -11,7 +11,6 @@ const Wrapper = styled.div`
 `;
 const Container = styled.div`
   margin-top: 32px;
-  margin-bottom: 500px;
   width: 100%;
   max-width: 1440px;
   position: relative;

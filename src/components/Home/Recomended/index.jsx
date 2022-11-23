@@ -5,6 +5,7 @@ import Card from "../../Card";
 import { useRef } from "react";
 const Recomended = () => {
   const slider = useRef();
+
   return (
     <Wrapper>
       <div className="maintitle">Recomended</div>
