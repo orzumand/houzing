@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  color: black;
+  margin-bottom: 200px;
 `;
 
 export { Container };

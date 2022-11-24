@@ -4,7 +4,6 @@ const Wrapper = styled.div`
   width: 100%;
   position: relative;
   margin-top: 138px;
-  margin-bottom: 100px;
   min-width: 1440px;
 `;
 const Image = styled.img`
