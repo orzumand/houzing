@@ -3,6 +3,7 @@ import CarouselComponent from "./Carousel";
 import Recomended from "./Recomended";
 import ChooseUs from "./ChooseUs";
 import Category from "./Category";
+import Popular from "./Popular";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Recomended />
       <ChooseUs />
       <Category />
+      <Popular />
     </Container>
   );
 };
