@@ -6,7 +6,7 @@ import { ReactComponent as Discord } from "../../../assets/icons/discord.svg";
 const Wrapper = styled.div`
   width: 100%;
   height: 434px;
-  margin-top: 80px;
+  margin-top: 96px;
   padding: 48px 130px;
 `;
 const Container = styled.div`

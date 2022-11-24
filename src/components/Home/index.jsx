@@ -4,6 +4,7 @@ import Recomended from "./Recomended";
 import ChooseUs from "./ChooseUs";
 import Category from "./Category";
 import Popular from "./Popular";
+import Recent from "./Recent";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <ChooseUs />
       <Category />
       <Popular />
+      <Recent />
     </Container>
   );
 };
