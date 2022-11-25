@@ -30,12 +30,12 @@ export const navbar = [
     private: false,
     hidden: false,
   },
-  {
-    id: useId,
-    element: <h1>SIgn in Page</h1>,
-    path: "/signin",
-    title: "SignIn",
-    private: false,
-    hidden: true,
-  },
+  // {
+  //   id: useId,
+  //   element: <h1>SIgn in Page</h1>,
+  //   path: "/signin",
+  //   title: "SignIn",
+  //   private: false,
+  //   hidden: true,
+  // },
 ];
