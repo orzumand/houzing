@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-const Container = styled.div`
-  margin-bottom: 200px;
-`;
+const Container = styled.div``;
 
 export { Container };
