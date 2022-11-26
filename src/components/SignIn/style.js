@@ -44,4 +44,11 @@ const Input = styled.input`
     border-bottom: 2px solid #00ddff;
   }
 `;
-export { Input, Title, Container, Wrapper };
+const Con = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: -40px;
+  margin-bottom: 50px;
+  text-align: center;
+`;
+export { Input, Title, Container, Wrapper, Con };
