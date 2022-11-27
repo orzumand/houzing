@@ -1,5 +1,5 @@
 import React from "react";
-import { BottomCon, Container, Part, Wrapper } from "./style";
+import { BottomCon, Container, Icon, Part, Wrapper } from "./style";
 
 const Footer = () => {
   return (
@@ -8,12 +8,32 @@ const Footer = () => {
         <Part>
           <Part.Title>Contact Us</Part.Title>
           <Part.Subtitle>
+            <Icon.Location />
             329 Queensberry Street, North
             <br /> Melbourne VIC 3051, Australia.
           </Part.Subtitle>
-          <Part.Subtitle>1234567890</Part.Subtitle>
-          <Part.Subtitle>support@houzing.com</Part.Subtitle>
-          <Part.Subtitle></Part.Subtitle>
+          <Part.Subtitle>
+            <Icon.Phone />
+            1234567890
+          </Part.Subtitle>
+          <Part.Subtitle>
+            <Icon.Mail />
+            support@houzing.com
+          </Part.Subtitle>
+          <Part.Icons>
+            <a href="/">
+              <Icon.Facebook />
+            </a>
+            <a href="/">
+              <Icon.Twitter />
+            </a>
+            <a href="/">
+              <Icon.Instagram />
+            </a>
+            <a href="/">
+              <Icon.Linkedin />
+            </a>
+          </Part.Icons>
         </Part>
         <Part>
           <Part.Title>Discover</Part.Title>
