@@ -9,13 +9,15 @@ import { GrLinkedinOption } from "react-icons/gr";
 const Wrapper = styled.div`
   height: 417px;
   background-color: #0d263b;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--padding);
 `;
 const Container = styled.div`
-  padding: var(--padding);
   padding-top: 48px;
   width: 100%;
-  min-width: 1440px;
-
+  max-width: 1440px;
   display: flex;
   justify-content: space-between;
 `;
