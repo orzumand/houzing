@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ReactComponent as logoImg } from "../../assets/icons/logo.svg";
 import { GrLocation } from "react-icons/gr";
 import { GrPhone } from "react-icons/gr";
 import { GrMail } from "react-icons/gr";
@@ -54,10 +55,7 @@ Part.Icons = styled.div`
   gap: 37px;
   margin-top: 10px;
 `;
-const BottomCon = styled.div`
-  margin: var(--padding);
-  border-top: 1px solid rgba(255, 255, 255, 0.3); ;
-`;
+
 const Icon = styled.div``;
 
 Icon.Location = styled(GrLocation)`
@@ -105,5 +103,50 @@ Icon.Linkedin = styled(GrLinkedinOption)`
   }
   font-size: 18px;
 `;
+const BottomCon = styled.div`
+  margin: var(--padding);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+const LogoWrapper = styled.div`
+  display: flex;
+`;
+const Logo = styled(logoImg)`
+  width: 30px;
+  margin-right: 12px;
+  text-align: center;
+`;
 
-export { BottomCon, Container, Wrapper, Part, Icon };
+const LogoTitle = styled.div`
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin: auto;
+`;
+const ToTop = styled.div`
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  width: 45px;
+  height: 45px;
+  background-color: #0061df;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+export {
+  BottomCon,
+  Container,
+  Wrapper,
+  Part,
+  Icon,
+  Logo,
+  LogoTitle,
+  LogoWrapper,
+  ToTop,
+};
