@@ -1,5 +1,15 @@
 import React from "react";
-import { BottomCon, Container, Icon, Part, Wrapper } from "./style";
+import {
+  BottomCon,
+  Container,
+  Icon,
+  Logo,
+  LogoTitle,
+  LogoWrapper,
+  Part,
+  Wrapper,
+  ToTop,
+} from "./style";
 
 const Footer = () => {
   return (
@@ -59,7 +69,13 @@ const Footer = () => {
           <Part.Subtitle>Contact Us</Part.Subtitle>
         </Part>
       </Container>
-      <BottomCon></BottomCon>
+      <BottomCon>
+        <LogoWrapper>
+          <Logo />
+          <LogoTitle>Houzing</LogoTitle>
+        </LogoWrapper>
+        <ToTop>^</ToTop>
+      </BottomCon>
     </Wrapper>
   );
 };
