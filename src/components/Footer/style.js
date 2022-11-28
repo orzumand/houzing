@@ -7,6 +7,7 @@ import { GrTwitter } from "react-icons/gr";
 import { GrFacebookOption } from "react-icons/gr";
 import { GrInstagram } from "react-icons/gr";
 import { GrLinkedinOption } from "react-icons/gr";
+import { IoIosArrowUp } from "react-icons/io";
 const Wrapper = styled.div`
   height: 417px;
   background-color: #0d263b;
@@ -114,6 +115,7 @@ const BottomCon = styled.div`
 `;
 const LogoWrapper = styled.div`
   display: flex;
+  cursor: pointer;
 `;
 const Logo = styled(logoImg)`
   width: 30px;
@@ -138,7 +140,13 @@ const ToTop = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  :active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
 `;
+Logo.Arrow = styled(IoIosArrowUp)``;
 export {
   BottomCon,
   Container,

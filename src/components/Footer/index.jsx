@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   BottomCon,
   Container,
@@ -12,6 +13,10 @@ import {
 } from "./style";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const Clicked = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
   return (
     <Wrapper>
       <Container>
@@ -70,11 +75,13 @@ const Footer = () => {
         </Part>
       </Container>
       <BottomCon>
-        <LogoWrapper>
+        <LogoWrapper onClick={() => navigate("/home")}>
           <Logo />
           <LogoTitle>Houzing</LogoTitle>
         </LogoWrapper>
-        <ToTop>^</ToTop>
+        <ToTop onClick={Clicked}>
+          <Logo.Arrow />
+        </ToTop>
       </BottomCon>
     </Wrapper>
   );
