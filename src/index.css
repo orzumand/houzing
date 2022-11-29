@@ -74,3 +74,13 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
+.slick-prev,
+.slick-next {
+  /* background: black !important; */
+  /* Border / Color */
+  width: 45px;
+  height: 45px;
+  border: 1px solid #e6e9ec;
+  /* Box - Shadow */
+  box-shadow: 0px 10px 50px rgba(13, 38, 59, 0.1);
+}

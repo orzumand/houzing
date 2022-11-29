@@ -4,6 +4,8 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import RootContext from "./context/index";
 import "antd/dist/antd.min.css";
 import "./index.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import Root from "./root";
 const queryClient = new QueryClient();
