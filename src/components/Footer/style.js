@@ -15,6 +15,7 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   padding: var(--padding);
+  margin-top: 80px;
 `;
 const Container = styled.div`
   padding-top: 48px;
