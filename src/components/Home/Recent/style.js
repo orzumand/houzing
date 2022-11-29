@@ -11,8 +11,8 @@ const Wrapper = styled.div`
 const Container = styled.div`
   margin-top: 32px;
   width: 100%;
-  max-width: 1440px;
   position: relative;
+  max-width: 1440px;
 `;
 
 const Items = styled.div`

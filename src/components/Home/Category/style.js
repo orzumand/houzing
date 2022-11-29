@@ -3,35 +3,34 @@ import { ReactComponent as Calculator } from "../../../assets/icons/calculator.s
 import { ReactComponent as Home } from "../../../assets/icons/house 1.svg";
 import { ReactComponent as Map } from "../../../assets/icons/maps.svg";
 import { ReactComponent as Discord } from "../../../assets/icons/discord.svg";
+import { ReactComponent as Arrow } from "../../../assets/icons/ArrowIcon.svg";
 const Wrapper = styled.div`
   width: 100%;
-  height: 434px;
-  margin-top: 96px;
-  padding: 48px 130px;
+  padding: 96px 130px;
 `;
 const Container = styled.div`
+  margin: auto;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
+  max-width: 1440px;
+  position: relative;
 `;
 const Content = styled.div`
-  display: flex;
-  max-width: 1180px;
-  width: 100%;
-  justify-content: space-between;
-  margin-top: 40px;
-  gap: 20px;
+  margin-bottom: 32px;
 `;
 const Card = styled.img`
-  max-width: 280x;
+  max-width: 280px;
   min-width: 230px;
   width: 100%;
   height: 350px;
+
   filter: brightness(30%);
 `;
 const CardWrapper = styled.div`
   position: relative;
+  max-width: 280px;
+  min-width: 230px;
+  width: 100%;
 `;
 const Icon = styled.div``;
 Icon.Home = styled(Home)`
@@ -53,12 +52,53 @@ const Title = styled.div`
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
-
   color: #ffffff;
-
   top: 229px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
 `;
-export { Container, Wrapper, Content, Card, Icon, Title, CardWrapper };
+const Arrows = styled.div``;
+
+Arrows.Left = styled(Arrow)`
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: -78px;
+  top: 55%;
+  padding: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  background-color: #ffffff;
+  box-shadow: 0px 20px 50px rgba(13, 38, 59, 0.3);
+  :active {
+    background-color: #ffffff60;
+  }
+  & path {
+    fill: black;
+  }
+`;
+Arrows.Right = styled(Arrow)`
+  height: 50px;
+  width: 50px;
+  position: absolute;
+
+  transform: rotate(180deg);
+  right: -78px;
+  top: 55%;
+  padding: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  background-color: #ffffff;
+  box-shadow: 0px 20px 50px rgba(13, 38, 59, 0.3);
+  :active {
+    background-color: #ffffff60;
+  }
+  & path {
+    fill: black;
+  }
+`;
+
+export { Container, Wrapper, Content, Card, Icon, Title, CardWrapper, Arrows };

@@ -4,37 +4,60 @@ import {
   CardWrapper,
   Container,
   Content,
-  // Icon,
   Title,
   Wrapper,
+  Arrows,
 } from "./style";
 import appartment from "../../../assets/img/appartment.png";
+import { useEffect } from "react";
+import { useState } from "react";
+import Slider from "react-slick";
+import { useRef } from "react";
+
+const { REACT_APP_BASE_URL: url } = process.env;
+const settings = {
+  className: "center",
+  dots: true,
+  centerMode: true,
+  infinite: true,
+  centerPadding: "20px",
+  slidesToShow: 4,
+  speed: 500,
+  arrows: false,
+  width: "100%",
+};
 const Category = () => {
+  const slider = useRef();
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch(`${url}/v1/categories/list`)
+      .then((res) => res.json())
+      .then((res) => setData(res?.data || []));
+  }, []);
+
   return (
     <Wrapper>
       <Container>
-        <div className="maintitle">Category</div>
-        <div className="subtitle">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, harum.
-        </div>
         <Content>
-          <CardWrapper>
-            <Title>House</Title>
-            <Card src={appartment} />
-          </CardWrapper>
-          <CardWrapper>
-            <Title>House</Title>
-            <Card src={appartment} />
-          </CardWrapper>
-          <CardWrapper>
-            <Title>House</Title>
-            <Card src={appartment} />
-          </CardWrapper>
-          <CardWrapper>
-            <Title>House</Title>
-            <Card src={appartment} />
-          </CardWrapper>
+          <div className="maintitle">Category</div>
+          <div className="subtitle">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
+            harum.
+          </div>
         </Content>
+
+        <Arrows.Right onClick={() => slider.current.slickNext()} />
+        <Arrows.Left onClick={() => slider.current.slickPrev()} />
+        <Slider ref={slider} {...settings}>
+          {data.map(({ name, id }) => {
+            return (
+              <CardWrapper key={id}>
+                <Title>{name}</Title>
+                <Card src={appartment} />
+              </CardWrapper>
+            );
+          })}
+        </Slider>
       </Container>
     </Wrapper>
   );
