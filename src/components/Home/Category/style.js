@@ -4,6 +4,7 @@ import { ReactComponent as Home } from "../../../assets/icons/house 1.svg";
 import { ReactComponent as Map } from "../../../assets/icons/maps.svg";
 import { ReactComponent as Discord } from "../../../assets/icons/discord.svg";
 import { ReactComponent as Arrow } from "../../../assets/icons/ArrowIcon.svg";
+import { ReactComponent as CategHome } from "../../../assets/icons/CategoryHome.svg";
 const Wrapper = styled.div`
   width: 100%;
   padding: 96px 130px;
@@ -101,4 +102,24 @@ Arrows.Right = styled(Arrow)`
   }
 `;
 
-export { Container, Wrapper, Content, Card, Icon, Title, CardWrapper, Arrows };
+const IconH = styled(CategHome)`
+  & path {
+    fill: white;
+  }
+  z-index: 1;
+  width: 60px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+`;
+export {
+  Container,
+  Wrapper,
+  Content,
+  Card,
+  Icon,
+  Title,
+  CardWrapper,
+  Arrows,
+  IconH,
+};

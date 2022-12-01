@@ -7,6 +7,7 @@ import {
   Title,
   Wrapper,
   Arrows,
+  IconH,
 } from "./style";
 import appartment from "../../../assets/img/appartment.png";
 import { useEffect } from "react";
@@ -52,6 +53,7 @@ const Category = () => {
           {data.map(({ name, id }) => {
             return (
               <CardWrapper key={id}>
+                <IconH />
                 <Title>{name}</Title>
                 <Card src={appartment} />
               </CardWrapper>
