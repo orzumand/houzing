@@ -5,6 +5,7 @@ import ChooseUs from "./ChooseUs";
 import Category from "./Category";
 import Popular from "./Popular";
 import Recent from "./Recent";
+import Testimonials from "./Testimonials";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Category />
       <Popular />
       <Recent />
+      <Testimonials />
     </Container>
   );
 };
